@@ -1,0 +1,81 @@
+<div class="mainfooter-shopname">
+    {% if section.settings.shopname%}
+        <h3><center>{{ section.settings.shopname }}</center></h3>
+    {%endif%}
+</div>
+<hr id="hrline">
+<div class="mainfooter-shopline">
+    {% if section.settings.shopline%}
+        <h5><center>{{ section.settings.shopline }}</center></h5>
+    {%endif%}
+</div>
+<div class="footer-container">
+ <div class=" navigation">
+    {% for link in linklists[section.settings.footernavigation].handle %}
+     <h3> {{link | upcase}}</h3>
+      {% for link in linklists[section.settings.footernavigation].links %}
+       <ul>
+            <li><a href="{{ link.url }}">{{ link.title }}&nbsp;&nbsp;&nbsp;</a></li>
+       </ul>
+      {% endfor %}
+    {% endfor %}
+ </div>
+  <div class=" contactinfo">
+    <h3>{{section.settings.contactheading}}</h3>
+        {{section.settings.contactdetails}}
+  </div>
+   <div class=" newsletter">
+     <h3>{{section.settings.newsslettertitle}}</h3>
+         {{section.settings.newslettertext}}
+   </div>
+</div>
+{% schema %}
+{
+    "name":"main-footer",
+    "settings":
+    [
+    {
+        "type":"text",
+        "label":"shop name",
+        "id":"shopname"
+    },
+    {
+        "type":"text",
+        "label":"shopline",
+        "id":"shopline"
+    },
+    {
+        "type":"link_list",
+        "id":"footernavigation",
+        "label":"Footer-navigation"
+    },
+    {   
+        "type":"text",
+        "id":"contactheading",
+        "label":"Contact header",
+        "default":"Conatct Information"
+    },
+    {   
+        "type":"richtext",
+        "id":"contactdetails",
+        "label":"Contact details"       
+    },
+    {   
+        "type":"text",
+        "id":"newsslettertitle",
+        "label":"Newsletter"
+       
+    },
+    {   
+        "type":"richtext",
+        "id":"newslettertext",
+        "label":"News letter"       
+    }
+    ],
+    "presets": [{
+		"category": "main-footer",
+		"name": "main-footer"
+	}]
+
+}
+{% endschema %}

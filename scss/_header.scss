@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: #0c0c0c;
+}
+
+.part {
+    border-width: 2px 0 0 0;
+    width: 50px;
+    margin: 10px auto;
+}
+
+.logo-image {
+    height: auto;
+    margin-top: 50px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.main-menu {
+    position: relative;
+}
+
+.container-menu {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-menu:before,
+.main-menu:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.core-menu {
+    text-align: center;
+    font: normal normal normal 1em/1 Roboto, sans-serif;
+    overflow: hidden;
+    color: white;
+}
+
+.core-menu li {
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+}
+
+.core-menu li a {
+    display: inline-block;
+    padding: 1em;
+}
+
+.dropdown {
+    position: absolute;
+    width: 230px;
+    text-align: left;
+    display: none;
+}
+
+.dropdown li {
+    display: block;
+}
+
+.dropdown li a {
+    display: block;
+}
+
+.dropdown2 {
+    position: absolute;
+    width: 200px;
+    text-align: right;
+    display: none;
+    right: -5%;
+    top: 0;
+}
+
+.dropdown2 li {
+    display: block;
+}
+
+.dropdown2 li a {
+    display: block;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

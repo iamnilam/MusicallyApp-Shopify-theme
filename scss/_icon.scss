@@ -1,0 +1,22 @@
+.icon-image {
+    border-radius: 0;
+    padding: 2px;
+    text-align: right;
+}
+
+.icon {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2, auto);
+}
+
+.bg-product {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2, auto);
+}
+
+.brand {
+    text-align: center;
+    grid-gap: 5px;
+}
